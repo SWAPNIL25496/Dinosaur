@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TImer </title>
+	<style >
+		body {
+			margin-left: 10%;
+			margin-right: 10%;
+			background-color: gray;
+		}
+		h1{
+			font-family: Arial;
+			font-size: 9em;
+			color: white;
+		}
+	</style>
+	<script >
+		var timerValue;
+		var timer;
+		function startTimer(){
+			timerValue= parseInt(document.getElementById("startValue").value);
+			console.log(timer);
+
+		document.getElementById("timerBox").hidden = false;
+		timer = setInterval(runTimer, 1000);
+				
+		}
+		function runTimer(){
+			document.getElementById("timerBox").innerHTML = timerValue--;
+		
+		if (timerValue<0){
+			clearInterval(timer);
+
+			alert("boom");
+			
+		}
+	}
+	</script>
+
+</head>
+<body>
+<input id="startValue">
+<button onclick="startTimer()">Start!</button>
+<h1 id="timerBox" hidden="true">start!</h1>
+
+</body>
+</html>
+timer.html
+Open with Google Docs
+Displaying timer.html.
